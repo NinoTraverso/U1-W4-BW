@@ -1,0 +1,41 @@
+/* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Outfit&display=swap" rel="stylesheet"> */
+
+/* font-family: 'Inter', sans-serif;    FONT TITOLO */
+/* font-family: 'Outfit', sans-serif;    FONT CORPO*/
+
+
+h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 60px;
+    color: floralwhite;
+}
+
+
+
+.button{
+color: #D20094 - #900080;
+font-family: 'Outfit', sans-serif, 16px;
+} 
+
+#logo {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    top: 40px;
+    left: 70px;
+    margin: 0;
+    padding: 10px;
+  }
+
+
+body{
+    background-image: url('/assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin-left: 0;
+    margin-right: 0;
+}
+/* OPPURE METTIAMO UNA CLASSE BG AD ESEMPIO SE NON VOLETE INTACCARE IL BODY */
+
