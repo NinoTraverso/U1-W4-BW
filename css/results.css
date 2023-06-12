@@ -29,3 +29,15 @@ main div {
   color: white;
   box-shadow: none;
 }
+
+.Correct {
+  flex-direction: column;
+}
+
+.Wrong{
+  flex-direction: column;
+}
+
+#results {
+justify-content: space-between;
+}
