@@ -1,0 +1,13 @@
+html {
+    background-image: url(../assets/bg.jpg);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+  stroke: #D20094;
+}
