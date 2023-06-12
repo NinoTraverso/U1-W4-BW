@@ -5,9 +5,6 @@
 /* font-family: 'Inter', sans-serif;    FONT TITOLO */
 /* font-family: 'Outfit', sans-serif;    FONT CORPO*/
 
-div {
-  display: block;
-}
 
 h1 {
   font-family: "Inter", sans-serif;
@@ -20,8 +17,7 @@ h1 {
   font-family: "Outfit", sans-serif, 16px;
 }
 
-#logo {
-  position: absolute;
+.logo {
   width: 150px;
   height: 40px;
   top: 40px;
