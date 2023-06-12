@@ -1,5 +1,16 @@
+<<<<<<< Updated upstream
 .base-timer {
   width: 10%;
+=======
+header {
+    display: inline-block;
+}
+
+.base-timer {
+    width: 10%;
+    display: inline-block;
+    margin-left: 60%;
+>>>>>>> Stashed changes
 }
 
 .base-timer__circle {

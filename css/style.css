@@ -11,7 +11,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;  
   color: white; 
+<<<<<<< Updated upstream
   margin: 3% 6%;
+=======
+  margin-left: 5%;
+  margin-top: 3%;
+>>>>>>> Stashed changes
 }
 
 #logo { 
