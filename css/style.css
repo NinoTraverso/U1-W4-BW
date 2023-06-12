@@ -2,15 +2,40 @@
 
 /* font-family: 'Inter', sans-serif;    FONT TITOLO */
 /* font-family: 'Outfit', sans-serif;    FONT CORPO*/
+
 body {
-  
   height: 100%;
   background-image: url("/assets/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;  
   color: white; 
+<<<<<<< Updated upstream
+  margin: 3% 6%;
+=======
   margin-left: 5%;
+  margin-top: 3%;
+>>>>>>> Stashed changes
 }
+
+#logo { 
+  width: 10%;
+}
+
+ul, span,input{
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p{
+    font-family: 'Outfit', sans-serif;
+    padding: 1% 10%;
+}
+
 h1 {
   font-family: "Inter", sans-serif;
  
