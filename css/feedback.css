@@ -1,0 +1,36 @@
+main{
+    text-align: center;
+}
+
+p{ color: white;
+    font-size: 2rem;
+    margin:2em;
+    font-family: "Outfit", sans-serif,;
+}
+
+.feedback-title{
+    margin:2em;
+}
+
+.feedback-title p{
+    color: white;
+    font-size: 2rem;
+    margin:2em;
+}
+
+
+.far {
+    margin:0.5em;
+    font-size:2em;
+}
+
+
+
+.button-feedback{
+    background-color: blue;
+    box-shadow: 5px 5px 5px 5px blue;
+    font-family: "Outfit", sans-serif,;
+    border:none
+    
+
+}
