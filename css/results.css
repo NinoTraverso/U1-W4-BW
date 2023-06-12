@@ -2,6 +2,9 @@ main {
     text-align: center;
 }
 
+main div {
+  padding-bottom: 3em;
+}
 .base-timer {
     width: 10%;
   }
