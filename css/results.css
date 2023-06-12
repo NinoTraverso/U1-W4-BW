@@ -1,24 +1,31 @@
 main {
-    text-align: center;
+  text-align: center;
 }
 
 main div {
   padding-bottom: 3em;
 }
 .base-timer {
-    width: 10%;
-  }
-  
+  width: 10%;
+}
+
 .base-timer__circle {
-    fill: none;
-    stroke: none;
-  }
-  
+  fill: none;
+  stroke: none;
+}
+
 .base-timer__path-elapsed {
-    stroke-width: 10px;
-    stroke: #D20094;
-  }
+  stroke-width: 10px;
+  stroke: #d20094;
+}
 
 #results {
-    display: flex;
+  display: flex;
+}
+
+.button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  box-shadow: none;
 }
