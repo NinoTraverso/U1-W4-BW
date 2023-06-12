@@ -1,9 +1,24 @@
+<<<<<<< Updated upstream
+.base-timer {
+  width: 10%;
+=======
+header {
+    display: inline-block;
+}
+
+.base-timer {
+    width: 10%;
+    display: inline-block;
+    margin-left: 60%;
+>>>>>>> Stashed changes
+}
+
 .base-timer__circle {
     fill: none;
     stroke: none;
 }
 
 .base-timer__path-elapsed {
-    stroke-width: 7px;
+    stroke-width: 10px;
   stroke: #D20094;
 }
