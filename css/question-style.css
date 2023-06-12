@@ -1,9 +1,15 @@
-.base-timer {
-  width: 10%;
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
-header {
-    display: inline-block;
+#logo {
+  height: fit-content;
+}
+
+
+.base-timer {
+  width: 10%;
 }
 
 .base-timer__circle {
