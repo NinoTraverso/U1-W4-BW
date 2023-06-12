@@ -37,21 +37,11 @@ h3 {
 }
 
 p{
-  font-family: 'Inter', sans-serif; 
   font-size: 1.5em;
-}
-
-ul, span,input{
-  font-family: 'Inter', sans-serif; 
-    
 }
 
 ul{
   padding-left: 10%;
-}
-
-li{
-  list-style-type: none;  
 }
 
 button{
