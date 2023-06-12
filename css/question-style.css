@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  height: fit-content;
+}
+
+
+.base-timer {
+  width: 10%;
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 10px;
+  stroke: #D20094;
+}
