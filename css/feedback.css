@@ -1,16 +1,17 @@
 main{
+    width: 73%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
 
 .feedback-title{
-    margin-top:4em;
+    margin-top:3em;
 }
 
- p{
-    color: white;
-    font-size: 2rem;
-   
-}
+
 
 
 .far {
@@ -21,6 +22,10 @@ main{
 .star-feedback{
     margin-top: 1em;
     margin-bottom:5em;
+}
+
+.star-feedback img{
+    margin:0.5%;
 }
 
 
@@ -34,9 +39,23 @@ input{
     background: none;
     border: none;
     border-bottom: 2px solid purple;
+    outline: none;
+    width: 90%;
+    color:white;
 }
 
 .button-feedback{
-    font-family: "Outfit", sans-serif, 16px;   display: block;   margin: 2rem auto;   padding: 1rem 2rem;   font-size: 1.2rem;   font-weight: 700;   text-transform: uppercase;   border: none;   cursor: pointer;   background: #0ff;   color: #101023;
+    font-family: "Outfit", sans-serif, 16px; 
+      display: block;  
+       margin: 2rem auto;  
+        padding: 1rem 2rem;  
+         font-size: 1.2rem;   
+         font-weight: 700; 
+           text-transform: uppercase;  
+            border: none;  
+             cursor: pointer;   
+             background: #0ff;  
+              color: #101023;
+              box-shadow: 0px 0px 50px 0px #0ff;
 
 }
