@@ -1,38 +1,25 @@
 main{
-    width: 73%;
+    width: 70%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-
-
 .feedback-title{
-    margin-top:3em;
-}
-
-
-
-
-.far {
-    margin:0.5em;
-    font-size:2em;
+    margin-top: 10%;
 }
 
 .star-feedback{
-    margin-top: 1em;
-    margin-bottom:5em;
+    margin-top: 2%;
+    margin-bottom: 6%;
 }
 
 .star-feedback img{
     margin:0.5%;
 }
 
-
 .feedback-form{
-    margin-top:3em;
-    margin-bottom: 3em;
-
+    margin-top: 5%;
 }
 
 input{
@@ -40,7 +27,7 @@ input{
     border: none;
     border-bottom: 2px solid #d20094;
     outline: none;
-    width: 90%;
+    width: 85%;
     color:white;
     padding-bottom: 1%;
     padding-left: 2%;
