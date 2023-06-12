@@ -1,7 +1,7 @@
+/* font-family: 'Outfit', sans-serif;    FONT TITOLO*/
+/* font-family: 'Inter', sans-serif;    FONT CORPO */
 
-
-/* font-family: 'Inter', sans-serif;    FONT TITOLO */
-/* font-family: 'Outfit', sans-serif;    FONT CORPO*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
 
 body {
   height: 100%;
@@ -9,59 +9,51 @@ body {
   background-size: cover;
   background-repeat: no-repeat;  
   color: white; 
-  margin: 3% 6%;}
-
+  margin: 3% 6%;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.9;
+}
 
 #logo { 
   width: 10%;
 }
 
 h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 3.70rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
   margin: 1%;
+  font-weight: bold;
 }
 
-h3{
-  margin: 1%;
-  color: #d20094;
+h2 {
+  margin: 2.5%;
+  font-size: 2.5em;
   font-weight: bold;
-  font-size: 2em ;
+}
+
+h3 {
+  margin: 1%;
+  font-size: 1.5em;
 }
 
 p{
-  font-family: 'Outfit', sans-serif;
-  padding: 1% 10%;
-}
-
-ul, span,input{
-    font-family: 'Outfit', sans-serif;
-    
+  font-size: 1.5em;
 }
 
 ul{
   padding-left: 10%;
 }
 
-li{
-  list-style-type: none;  
+button{
+  margin-top: 6%;
+  padding: 1.5% 5%;  
+  font-size: 1.2rem;   
+  font-weight: bold;  
+  border: none;  
+  cursor: pointer;   
+  background: #00ffff;  
+  color: #101023;
+  box-shadow: 0px 0px 50px 0px #0ff;
 }
-
-.button {
-  color: #d20094 - #900080;
-  font-family: "Outfit", sans-serif, 16px;
-}
-
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.bold{
-    font-family: "Inter", sans-serif;
-    font-size: 1.3em;
-    font-weight: bold;   
-}
-
 
 /* OPPURE METTIAMO UNA CLASSE BG AD ESEMPIO SE NON VOLETE INTACCARE IL BODY */
