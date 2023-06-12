@@ -16,9 +16,40 @@ body {
   width: 10%;
 }
 
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 3.70rem;
+  margin: 1%;
+}
+
+h3{
+  margin: 1%;
+  color: #d20094;
+  font-weight: bold;
+  font-size: 2em ;
+}
+
+p{
+  font-family: 'Outfit', sans-serif;
+  padding: 1% 10%;
+}
+
 ul, span,input{
     font-family: 'Outfit', sans-serif;
     
+}
+
+ul{
+  padding-left: 10%;
+}
+
+li{
+  list-style-type: none;  
+}
+
+.button {
+  color: #d20094 - #900080;
+  font-family: "Outfit", sans-serif, 16px;
 }
 
 .container{
@@ -26,63 +57,11 @@ ul, span,input{
     margin: 0 auto;
 }
 
-p{
-    font-family: 'Outfit', sans-serif;
-    padding: 1% 10%;
-}
-
-h1 {
-  font-family: "Inter", sans-serif;
- 
-  font-size: 3.70rem;
-  margin: 1%;
-}
-
-h3{
-    margin: 1%;
-    color: #d20094;
-    font-weight: bold;
-    
-    font-size: 2em ;
-  }
-  .bold{
+.bold{
     font-family: "Inter", sans-serif;
     font-size: 1.3em;
-    font-weight: bold;
-    
-    
-}
-
-p{
-    font-family: 'Outfit', sans-serif;
-    padding: 1% 10%;
+    font-weight: bold;   
 }
 
 
-ul{
-    padding-left: 10%;
-}
-
-ul, span,input{
-    font-family: 'Outfit', sans-serif;
-    
-}
-
-
-
-button {
-  font-family: "Outfit", sans-serif, 16px;
-  display: block;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  background: #0ff;
-  color: #101023;
- 
-}
-
-
+/* OPPURE METTIAMO UNA CLASSE BG AD ESEMPIO SE NON VOLETE INTACCARE IL BODY */

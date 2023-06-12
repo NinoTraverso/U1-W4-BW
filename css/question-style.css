@@ -1,16 +1,15 @@
-<<<<<<< Updated upstream
-.base-timer {
-  width: 10%;
-=======
 header {
-    display: inline-block;
+  display: flex;
+  justify-content: space-between;
 }
 
+#logo {
+  height: fit-content;
+}
+
+
 .base-timer {
-    width: 10%;
-    display: inline-block;
-    margin-left: 60%;
->>>>>>> Stashed changes
+  width: 10%;
 }
 
 .base-timer__circle {
