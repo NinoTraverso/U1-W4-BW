@@ -3,8 +3,10 @@
   width: 10%;
 }
 
-=======
->>>>>>> Stashed changes
+header {
+    display: inline-block;
+}
+
 .base-timer__circle {
     fill: none;
     stroke: none;
