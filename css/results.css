@@ -3,28 +3,46 @@ main {
 }
 
 main div {
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
+
+#results {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Correct {
+  text-align: left;
+  flex-direction: column;
+}
+
+.Correct>:nth-child(1) {
+  font-weight: 400;
+}
+
+.Wrong {
+  text-align: right;
+  flex-direction: column;
+}
+
+.Wrong>:nth-child(1) {
+  font-weight: 400;
+}
+
 .base-timer {
   width: 30%;
   margin-bottom: 0px;
-  
 }
 
 .base-timer__circle {
   fill: none;
   stroke: none;
-  
 }
 
 .base-timer__path-elapsed {
   stroke-width: 10px;
   stroke: #d20094;
-  
-}
-
-#results {
-  display: flex;
 }
 
 .button {
@@ -33,19 +51,6 @@ main div {
   color: white;
   box-shadow: none;
   margin-top: 0;
-}
-
-.Correct {
-  flex-direction: column;
-}
-
-.Wrong {
-  flex-direction: column;
-}
-
-#results {
-  justify-content: space-around;
-  align-items: center;
 }
 
 .base-timer > h5 {
