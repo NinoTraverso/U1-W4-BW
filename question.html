@@ -3,7 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/question-style.css" />
+    <title>BenchMark</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img src="assets/epicode_logo.png" alt="Logo" />
+      <div class="base-timer">
+        <svg
+          class="base-timer__svg"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+          </g>
+        </svg>
+        <span>
+          <!-- Remaining time label -->
+        </span>
+      </div>
+    </header>
+    <main class="quest-container"></main>
+    <footer>
+      <p class="question-counter">QUESTION</p>
+    </footer>
+  </body>
 </html>
