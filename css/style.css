@@ -60,4 +60,18 @@ ul{
   font-family: "Outfit", sans-serif, 16px;
 }
 
+<<<<<<< Updated upstream
+=======
+.logo {
+  width: 10%;
+  margin: 2.5%;
+}
+
+body {
+  background-image: url("/assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 5%;
+}
+>>>>>>> Stashed changes
 /* OPPURE METTIAMO UNA CLASSE BG AD ESEMPIO SE NON VOLETE INTACCARE IL BODY */
