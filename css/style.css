@@ -1,65 +1,59 @@
-/* <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Outfit&display=swap" rel="stylesheet"> */
+/* font-family: 'Outfit', sans-serif;    FONT TITOLO*/
+/* font-family: 'Inter', sans-serif;    FONT CORPO */
 
-/* font-family: 'Inter', sans-serif;    FONT TITOLO */
-/* font-family: 'Outfit', sans-serif;    FONT CORPO*/
-ul, span,input{
-    font-family: 'Outfit', sans-serif;
-    
-}
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
+
 body {
-    height: 100%;
-    background-image: url("/assets/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;   
-}
-p{
-    color: aliceblue;
-    font-family: 'Outfit', sans-serif;
-    padding: 1% 10%;
-}
-
-h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 3.75em;
-  margin: 1%;
-  color: floralwhite;
-}
-h3{
-    margin: 1%;
-    color: #d20094;
-    font-weight: bold;
-    font-family: "Inter", sans-serif;
-    font-size: 2em ;
-}
-
-li{
-    list-style-type: none;  
-    color: white;
-}
-
-ul{
-    padding-left: 10%;
-}
-
-.button {
-  color: #d20094 - #900080;
-  font-family: "Outfit", sans-serif, 16px;
+  height: 100%;
+  background-image: url("/assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;  
+  color: white; 
+  margin: 3% 6%;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.9;
 }
 
 #logo { 
-  width: 150px;
-  height: 40px;
-  top: 40px;
-  left: 70px;
-  margin: 0;
-  padding: 10px;
+  width: 10%;
 }
 
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
+  margin: 1%;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 2.5%;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 1%;
+  font-size: 1.5em;
+}
+
+p{
+  font-size: 1.5em;
+}
+
+ul{
+  padding-left: 10%;
+}
+
+button{
+  margin-top: 6%;
+  padding: 1.5% 5%;  
+  font-size: 1.2rem;   
+  font-weight: bold;  
+  border: none;  
+  cursor: pointer;   
+  background: #00ffff;  
+  color: #101023;
+  box-shadow: 0px 0px 50px 0px #00ffff;
+}
 
 /* OPPURE METTIAMO UNA CLASSE BG AD ESEMPIO SE NON VOLETE INTACCARE IL BODY */

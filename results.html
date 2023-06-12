@@ -3,7 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/results.css" />
     <title>Results</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img id="logo" src="/assets/epicode_logo.png" alt="Epicode Logo" />
+    </header>
+    <main>
+      <div>
+        <h1>Results</h1>
+        <p>The summary of your answers:</p>
+      </div>
+      <div id="results">
+        <div class="Correct">
+        <h2>Correct</h2>
+        <h2>66.7%</h2>
+        <p>4/6 questions</p>
+      </div>
+        <div class="base-timer">
+          <svg
+            class="base-timer__svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g class="base-timer__circle">
+              <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+            </g>
+          </svg>
+          <h5>Congratulations!</h5>
+          <h5>You passed the exam</h5>
+          <p>
+            We'll send you the certificate <br />
+            in few minutes. <br />
+            Check your email (inlcuding <br />
+            promotions / spam folder)
+          </p>
+        </div class="Wrong" >
+        <div>
+        <h1>Wrong</h1>
+        <h1>33.3%</h1>
+        <p>2/6 questions</p>
+      </div>
+      </div>
+      <button class="button">RATE US</button>
+    </main>
+    <script src="/js/script.js"></script>
+  </body>
 </html>
