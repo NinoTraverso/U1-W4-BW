@@ -4,12 +4,47 @@
 
 /* font-family: 'Inter', sans-serif;    FONT TITOLO */
 /* font-family: 'Outfit', sans-serif;    FONT CORPO*/
-
+ul, span,input{
+    font-family: 'Outfit', sans-serif;
+    
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body {
+    height: 100%;
+    background-image: url("/assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+p{
+    color: aliceblue;
+    font-family: 'Outfit', sans-serif;
+    padding: 1% 10%;
+}
 
 h1 {
   font-family: "Inter", sans-serif;
-  font-size: 60px;
+  font-size: 3.75em;
+  margin: 1%;
   color: floralwhite;
+}
+h3{
+    margin: 1%;
+    color: #d20094;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    font-size: 2em ;
+}
+
+li{
+    list-style-type: none;  
+    color: white;
+}
+
+ul{
+    padding-left: 10%;
 }
 
 .button {
@@ -17,7 +52,7 @@ h1 {
   font-family: "Outfit", sans-serif, 16px;
 }
 
-.logo {
+#logo { 
   width: 150px;
   height: 40px;
   top: 40px;
@@ -26,11 +61,5 @@ h1 {
   padding: 10px;
 }
 
-body {
-  background-image: url("/assets/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 0;
-  margin-right: 0;
-}
+
 /* OPPURE METTIAMO UNA CLASSE BG AD ESEMPIO SE NON VOLETE INTACCARE IL BODY */
