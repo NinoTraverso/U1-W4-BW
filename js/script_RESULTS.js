@@ -1,4 +1,4 @@
-const wrong = 5; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
+const wrong = 4; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
 
 function showResult(input) {
   if (input >= 5) {
@@ -21,7 +21,7 @@ function circumference(result) {
 }
 circumference(wrong); // Mosta il numero di pixel tolti dalla circonferenza azzura
 
-// Questa funzione cambia la percentuale nel secondo h2 dei div "Correct" e "Wrong" e mostra la frazione di risposte giuste e sbagliate
+// Questa funzione cambia la percentuale nel secondo h2 dei div "Correct" e "Wrong" e mostra la frazione di risposte giuste e sbagliate. Questa funzione cicciottona e' basato sul concetto di risposte sbagliate, con un valore totale di 0 a 10 per le risposte sbagliate. Ad esempio, con venti domande, una risposta sbagliate deve avere un valore di 0.5 e non 1.
 
 function showResultPercentage(input) {
   const totalPercentage = 100;
@@ -68,6 +68,10 @@ function showResultPercentage(input) {
   wrongsOverRight.appendChild(wrongAndRights);
 }
 showResultPercentage(wrong);
+
+const button = (document.getElementById("button").onclick = function () {
+  window.location.href = "/feedback.html";
+});
 
 /*
 function resultPositiveNegative(percentualeTest) {
