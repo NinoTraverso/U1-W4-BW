@@ -45,13 +45,7 @@ main div {
   stroke: #d20094;
 }
 
-.button {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  box-shadow: none;
-  margin-top: 0;
-}
+
 
 .base-timer > h5 {
   font-weight: 700;
@@ -61,4 +55,12 @@ main div {
   font-size: small;
   padding-top: 20px;
   color: white;
+}
+
+.button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  box-shadow: none;
+  margin-top: 0;
 }
