@@ -20,3 +20,12 @@ header {
   stroke-width: 10px;
   stroke: #D20094;
 }
+
+footer p {
+  font-size: 1em;
+}
+
+footer span:nth-of-type(2) {
+  color: #D20094;
+  font-weight: bold;
+}
