@@ -84,10 +84,15 @@ main {
   transform-origin: center;
 }
 
-.button {
+#button {
   background: none;
   border: 2px solid white;
   color: white;
   box-shadow: none;
   margin-top: 50px;
+}
+
+.button {
+  position: relative;
+  top: -5px; 
 }
