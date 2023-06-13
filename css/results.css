@@ -2,27 +2,30 @@ main {
   text-align: center;
 }
 
-main div {
-}
-
 #results {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-bottom: 0;
-
 }
 
 .Correct {
   text-align: left;
   flex-direction: column;
-  margin-top:80px
+  margin-top: 80px;
 }
 
 .Correct > :nth-child(1) {
   font-weight: 400;
+  margin-left: 0;
 }
 
+#correctPercentage {
+  margin-left: 0;
+  border-left: 0;
+  padding-left: 0;
+  padding-bottom: 5px
+}
 .Wrong {
   text-align: right;
   flex-direction: column;
@@ -31,6 +34,14 @@ main div {
 
 .Wrong > :nth-child(1) {
   font-weight: 400;
+  margin-right: 0;
+}
+
+#wrongPercentage {
+  margin-right: 0;
+  border-right: 0;
+  padding-right: 0;
+  padding-bottom: 5px
 }
 
 #circleContainer {
@@ -67,8 +78,8 @@ main div {
   fill: none;
   stroke: #00fefe;
   stroke-width: 30px;
-  stroke-dasharray: 628;
-  stroke-dashoffset: -400; /* Mettendo -numero, il cerchio azzurro (domande corrette) si muove in senso antiorario dall cima del cerchio*/
+  stroke-dasharray: 879.64594300514210676954014731826;
+  stroke-dashoffset: 0; /* Mettendo -numero, il cerchio azzurro (domande corrette) si muove in senso antiorario dall cima del cerchio*/
   transform: rotate(-90deg);
   transform-origin: center;
 }

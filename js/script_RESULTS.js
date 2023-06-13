@@ -1,8 +1,80 @@
+const wrong = 5; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
+
+function showResult(input) {
+  if (input >= 5) {
+    console.log(
+      "Sei stato Bocciato. Non ti buttare giu, sono solo TANTI SOLDI!"
+    );
+  } else console.log("Hai superato il Test Sei Un Drago");
+}
+showResult(wrong);
+
+//Questa funzione toglie la percentuale di circonferenza blue da sopra il cerchio viola (toglie il 10% della circonferenza del cerchio blu per ogni risposta sbagliata)
+
+function circumference(result) {
+  const circumferencePercentage = document.getElementById("progress");
+  let wrong = result;
+  const multiplyTenPercent = -87.964594300514210676954014731826; //numero lungo per via del pigreco (che e' un numero decimale infinito)
+  const total = wrong * multiplyTenPercent;
+  console.log(total);
+  circumferencePercentage.style.strokeDashoffset = total;
+}
+circumference(wrong); // Mosta il numero di pixel tolti dalla circonferenza azzura
+
+// Questa funzione cambia la percentuale nel secondo h2 dei div "Correct" e "Wrong" e mostra la frazione di risposte giuste e sbagliate
+
+function showResultPercentage(input) {
+  const totalPercentage = 100;
+  const wrongPercentage = input * 10;
+  const rightPercentage = totalPercentage - wrongPercentage;
+
+  console.log("WRONG", wrongPercentage + " " + "RIGHT", rightPercentage);
+
+  //QUI RICHIAMIAMO L'h3 "rightPercentage" DELLA SECONDA RIGA A SINISTRA PER INJETTARE UN h3 CON LA PERCENTUALE DI RISPOSTE GIUSTE
+
+  const rightAnswerParent = document.getElementById("correctPercentage");
+
+  const rightAnswer = document.createElement("h3");
+  rightAnswer.textContent = rightPercentage + "%";
+  rightAnswer.style.fontWeight = 700;
+  rightAnswer.style.margin = "0px";
+  rightAnswerParent.appendChild(rightAnswer);
+
+  //QUI RICHIAMIAMO IL p "rightAnswers" DELLA TERZA RIGA A SINISTRA PER INJETTARE UN p CON LA FRAZIONE DI RISPOSTE GIUSTE SU TOTALE DELLE DOMANDE
+
+  const rightsOverWrong = document.getElementById("rightAnswers");
+
+  const rightsAndWrongs = document.createElement("p");
+  rightsAndWrongs.textContent = [10 - wrong] + "/10";
+  rightsAndWrongs.style.fontSize = "20px";
+  rightsOverWrong.appendChild(rightsAndWrongs);
+
+  //QUI RICHIAMIAMO L'h3 "wrongPercentage" DELLA SECONDA RIGA A DESTRA PER INJETTARE UN h3 CON LA PERCENTUALE DI RISPOSTE GIUSTE
+
+  const wrongAnswerParent = document.getElementById("wrongPercentage");
+
+  const wrongAnswer = document.createElement("h3");
+  wrongAnswer.textContent = wrongPercentage + "%";
+  wrongAnswer.style.fontWeight = 700;
+  wrongAnswerParent.appendChild(wrongAnswer);
+
+  //QUI RICHIAMIAMO IL p "wrongtAnswers" DELLA TERZA RIGA A DESTRA PER INJETTARE UN p CON LA FRAZIONE DI RISPOSTE SBAGLIATE SU TOTALE DELLE DOMANDE
+
+  const wrongsOverRight = document.getElementById("wrongAnswers");
+
+  const wrongAndRights = document.createElement("p");
+  wrongAndRights.textContent = wrong + "/10";
+  wrongAndRights.style.fontSize = "20px";
+  wrongsOverRight.appendChild(wrongAndRights);
+}
+showResultPercentage(wrong);
+
+/*
 function resultPositiveNegative(percentualeTest) {
   const div = document.createElement("div");
   const paragrafo = document.createElement("p");
 
-  if (percentualeTest > 50) {
+  if (percentualeTest >= 60) {
     paragrafo.innerText = "Hai superato il Test Sei Un Drago";
   } else {
     paragrafo.innerText = "Sei stato Bocciato Fai CACARE";
@@ -11,3 +83,4 @@ function resultPositiveNegative(percentualeTest) {
   div.appendChild(paragrafo);
   document.body.appendChild(div);
 }
+*/
