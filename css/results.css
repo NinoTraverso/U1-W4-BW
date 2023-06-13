@@ -17,7 +17,7 @@ main div {
   flex-direction: column;
 }
 
-.Correct>:nth-child(1) {
+.Correct > :nth-child(1) {
   font-weight: 400;
 }
 
@@ -26,7 +26,7 @@ main div {
   flex-direction: column;
 }
 
-.Wrong>:nth-child(1) {
+.Wrong > :nth-child(1) {
   font-weight: 400;
 }
 
@@ -41,14 +41,14 @@ main div {
   margin-top: 80px;
   top: 50%;
   left: 50%;
-  width: 230px; 
-  height: 230px; 
+  width: 230px;
+  height: 230px;
 }
 
 #svgCircle {
   position: relative;
   margin: 0 auto;
-  width: 230px; 
+  width: 230px;
   height: 230px;
 }
 
@@ -69,8 +69,6 @@ main div {
   transform: rotate(-90deg);
   transform-origin: center;
 }
-
-
 
 .button {
   background: none;
