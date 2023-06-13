@@ -100,43 +100,9 @@ const questions = [
 
 const questionContainer = document.createElement("div")
 const questionText = document.createElement("p")
-// const answerContainer1 = document.createElement("div")
-// const answer1 = document.createElement("p")
-// const answerContainer2 = document.createElement("div")
-// const answer2 = document.createElement("p")
-// const answerContainer3 = document.createElement("div")
-// const answer3 = document.createElement("p")
-// const answerContainer4 = document.createElement("div")
-// const answer4 = document.createElement("p")
 const mainContent = document.getElementById("quest-container")
 mainContent.appendChild(questionContainer)
 questionContainer.appendChild(questionText)
-// mainContent.appendChild(answerContainer1)
-// answerContainer1.appendChild(answer1)
-// mainContent.appendChild(answerContainer2)
-// answerContainer1.appendChild(answer2)
-// mainContent.appendChild(answerContainer3)
-// answerContainer1.appendChild(answer3)
-// mainContent.appendChild(answerContainer4)
-// answerContainer1.appendChild(answer4)
-
-
-
-// const selectQuestion = () => {
-//     questions.forEach(el => {
-//         questionText.innerText = el.question
-//         allRadioButton.forEach(RadioButton => {
-//             let answers = []
-//             answers.push(el.correct_answer)
-//             el.incorrect_answers.forEach(incorrect => {
-//                 answers.push(incorrect)
-//                 console.log(answers)
-//             })
-//             const radioText = document.createElement("label")
-//             radioText.innerText(el.answer)
-//         })
-//     })
-// }
 
 const selectQuestion = () => {
     let counter = 0
