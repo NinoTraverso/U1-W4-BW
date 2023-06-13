@@ -3,18 +3,20 @@ main {
 }
 
 main div {
-  padding-bottom: 2em;
 }
 
 #results {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 0;
+
 }
 
 .Correct {
   text-align: left;
   flex-direction: column;
+  margin-top:80px
 }
 
 .Correct > :nth-child(1) {
@@ -24,6 +26,7 @@ main div {
 .Wrong {
   text-align: right;
   flex-direction: column;
+  margin-top: 80px;
 }
 
 .Wrong > :nth-child(1) {
@@ -41,15 +44,15 @@ main div {
   margin-top: 80px;
   top: 50%;
   left: 50%;
-  width: 230px;
-  height: 230px;
+  width: 320px;
+  height: 320px;
 }
 
 #svgCircle {
   position: relative;
   margin: 0 auto;
-  width: 230px;
-  height: 230px;
+  width: 320px;
+  height: 320px;
 }
 
 #track {
@@ -65,7 +68,7 @@ main div {
   stroke: #00fefe;
   stroke-width: 30px;
   stroke-dasharray: 628;
-  stroke-dashoffset: -499; /* Mettendo -numero, il cerchio azzurro (domande corrette) si muove in senso antiorario dall cima del cerchio*/
+  stroke-dashoffset: -400; /* Mettendo -numero, il cerchio azzurro (domande corrette) si muove in senso antiorario dall cima del cerchio*/
   transform: rotate(-90deg);
   transform-origin: center;
 }
@@ -75,4 +78,5 @@ main div {
   border: 2px solid white;
   color: white;
   box-shadow: none;
+  margin-top: 50px;
 }
