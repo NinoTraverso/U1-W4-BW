@@ -3,10 +3,36 @@ main {
 }
 
 main div {
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
+
+#results {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Correct {
+  text-align: left;
+  flex-direction: column;
+}
+
+.Correct>:nth-child(1) {
+  font-weight: 400;
+}
+
+.Wrong {
+  text-align: right;
+  flex-direction: column;
+}
+
+.Wrong>:nth-child(1) {
+  font-weight: 400;
+}
+
 .base-timer {
-  width: 10%;
+  width: 30%;
+  padding-bottom: 0px;
 }
 
 .base-timer__circle {
@@ -19,25 +45,20 @@ main div {
   stroke: #d20094;
 }
 
-#results {
-  display: flex;
-}
-
 .button {
   background: none;
   border: 2px solid white;
   color: white;
   box-shadow: none;
+  margin-top: 0;
 }
 
-.Correct {
-  flex-direction: column;
+.base-timer > h5 {
+  font-weight: 700;
 }
 
-.Wrong{
-  flex-direction: column;
-}
-
-#results {
-justify-content: space-between;
+.base-timer p {
+  font-size: small;
+  padding-top: 20px;
+  color: white;
 }
