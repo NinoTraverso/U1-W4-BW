@@ -98,41 +98,84 @@ const questions = [
     },
   ];
 
-const questionContainer = document.createElement("div")
-const questionText = document.createElement("p")
-const mainContent = document.getElementById("quest-container")
-mainContent.appendChild(questionContainer)
-questionContainer.appendChild(questionText)
+let i = 0
 
-const selectQuestion = () => {
-    let counter = 0
-    questions.forEach(el => {
-        questionText.innerText = el.question
-        console.log(questionText.innerText)
-        const allAnswer = []
-        allAnswer.push(el.correct_answer)
-        el.incorrect_answers.forEach(incorrect => {
-            allAnswer.push(incorrect)  // Tutte le risposte
-        })
-        // console.log(allAnswer)
-        let selectedAnswer = []
-        for ( let i = 0; i < allAnswer.length; i++) {
-        const selectAnswer = () => {
-        let rngAnswer = Math.floor(Math.random()*allAnswer.length)
-        if (selectedAnswer.includes(allAnswer[rngAnswer])) {
-            selectAnswer()
-        } else {
-        let answerDiv = document.createElement("div")
-        answerDiv.innerHTML = `
-        <label><input type = "radio" name = "answer" required/>${allAnswer[rngAnswer]}</label>`
-        mainContent.appendChild(answerDiv)
-        selectedAnswer.push(allAnswer[rngAnswer])}
-        }
-        selectAnswer()} 
-        const questionNumber = document.getElementById("questionNumber") 
-        counter += 1
-        questionNumber.innerText = counter
-    })
-    }
+const questionContainer = document.getElementById("quest-container")
+const addQuestion = (i) => {    // Aggiungo la domanda
+  questionContainer.innerText = questions[i].question
+}
 
-selectQuestion()
+addQuestion(i) 
+
+const answersCalculator = (i) => {    // Faccio un array di sole risposte
+  const allAnswer = []
+  allAnswer.push(questions[i].correct_answer)
+  questions[i].incorrect_answers.forEach(answer => allAnswer.push(answer))
+  return allAnswer
+}
+
+answersCalculator(i)
+
+const addAnswer = () => {
+  let allAnswer = answersCalculator(i)
+  const mainAnswer = document.getElementById("answer-container")
+  for (let j = 0; j <= allAnswer.length; j++) {
+    let rngAnswer = Math.floor(Math.random()*allAnswer.length)
+    const answerDiv = document.createElement("div")
+    answerDiv.innerHTML = `
+    <label><input type = "radio" name = "answer"/>${allAnswer[rngAnswer]}</label>
+    `
+    allAnswer.splice(rngAnswer, 1)
+    j = 0
+    mainAnswer.appendChild(answerDiv)
+  }
+}
+addAnswer()
+
+const addQuestionNumber = (i) => {
+  const questionNumber = document.getElementById("questionNumber")
+  questionNumber.innerText = i+1
+}
+addQuestionNumber(i)
+
+
+
+
+// const questionContainer = document.createElement("div")
+// const questionText = document.createElement("p")
+// const mainContent = document.getElementById("quest-container")
+// mainContent.appendChild(questionContainer)
+// questionContainer.appendChild(questionText)
+
+// const selectQuestion = () => {
+//     let counter = 0
+//     questions.forEach(el => {
+//         questionText.innerText = el.question
+//         console.log(questionText.innerText)
+//         const allAnswer = []
+//         allAnswer.push(el.correct_answer)
+//         el.incorrect_answers.forEach(incorrect => {
+//             allAnswer.push(incorrect)  // Tutte le risposte
+//         })
+//         // console.log(allAnswer)
+//         let selectedAnswer = []
+//         for ( let i = 0; i < allAnswer.length; i++) {
+//         const selectAnswer = () => {
+//         let rngAnswer = Math.floor(Math.random()*allAnswer.length)
+//         if (selectedAnswer.includes(allAnswer[rngAnswer])) {
+//             selectAnswer()
+//         } else {
+//         let answerDiv = document.createElement("div")
+//         answerDiv.innerHTML = `
+//         <label><input type = "radio" name = "answer" required/>${allAnswer[rngAnswer]}</label>`
+//         mainContent.appendChild(answerDiv)
+//         selectedAnswer.push(allAnswer[rngAnswer])}
+//         }
+//         selectAnswer()} 
+//         const questionNumber = document.getElementById("questionNumber") 
+//         counter += 1
+//         questionNumber.innerText = counter
+//     })
+//     }
+
+// selectQuestion()
