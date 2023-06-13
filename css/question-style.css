@@ -21,6 +21,13 @@ header {
   stroke: #D20094;
 }
 
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+}
+
 footer p {
   text-align: center;
   font-size: 1em;
