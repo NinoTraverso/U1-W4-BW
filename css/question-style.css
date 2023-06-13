@@ -26,6 +26,38 @@ main {
   margin-bottom: 5%;
 }
 
+#answer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main p {
+  margin-bottom: 5%;
+}
+
+.answerDiv {
+  width: 25%;
+  margin: 2%;
+  padding: 2.5%;
+  border: 2px outset #00ffff;
+  border-radius: 25px;
+}
+input {
+  display: none;
+}
+
+.checked {
+  background-color: #D20094;
+}
+
+.remove {
+  display: none;
+}
+
 footer p {
   text-align: center;
   font-size: 1em;

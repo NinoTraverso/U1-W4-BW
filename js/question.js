@@ -104,8 +104,7 @@ const questionContainer = document.getElementById("quest-container")
 const addQuestion = (i) => {    // Aggiungo la domanda
   questionContainer.innerText = questions[i].question
 }
-
-addQuestion(i) 
+addQuestion(i)
 
 const answersCalculator = (i) => {    // Faccio un array di sole risposte
   const allAnswer = []
@@ -114,29 +113,62 @@ const answersCalculator = (i) => {    // Faccio un array di sole risposte
   return allAnswer
 }
 
-answersCalculator(i)
+const addCheckedClass = () => {     // Aggiungo checked class quando cliccato 
+  const allAnswerDiv = document.querySelectorAll(".answerDiv")
+  allAnswerDiv.forEach( el => el.addEventListener("click", () => {
+    allAnswerDiv.forEach( div => div.classList.remove("checked"))
+    el.classList.add("checked")
+  }))
+}
 
-const addAnswer = () => {
+const addAnswer = () => {           // Aggiungo le risposte
   let allAnswer = answersCalculator(i)
   const mainAnswer = document.getElementById("answer-container")
   for (let j = 0; j <= allAnswer.length; j++) {
     let rngAnswer = Math.floor(Math.random()*allAnswer.length)
     const answerDiv = document.createElement("div")
+    answerDiv.classList.add("answerDiv")
     answerDiv.innerHTML = `
     <label><input type = "radio" name = "answer"/>${allAnswer[rngAnswer]}</label>
     `
     allAnswer.splice(rngAnswer, 1)
-    j = 0
     mainAnswer.appendChild(answerDiv)
+    j = 0
   }
+  addCheckedClass()
 }
 addAnswer()
 
-const addQuestionNumber = (i) => {
+const addQuestionNumber = (i) => {    // Aggiungo counter delle domande
   const questionNumber = document.getElementById("questionNumber")
   questionNumber.innerText = i+1
 }
 addQuestionNumber(i)
+
+
+let correctAnswer = 0
+const addAnswerVerification = () => {   // Verifico se la risposta è corretta ed incremento se affermativo
+  const divCorrectAnswer = document.querySelector(".checked")
+  if(divCorrectAnswer.innerText === questions[i].correct_answer) correctAnswer++
+  }
+
+
+const goToNextQuestion = () => {
+  const btn = document.getElementsByTagName("button")
+  btn[0].addEventListener("click", () => {
+    addAnswerVerification()
+    i++
+    const allAnswerDiv = document.querySelectorAll(".answerDiv")
+    allAnswerDiv.forEach(div => {
+      div.classList.add("remove")
+    })
+    addQuestion(i)
+    answersCalculator(i)
+    addAnswer()
+    addQuestionNumber(i)
+  })
+}
+goToNextQuestion()
 
 
 
