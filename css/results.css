@@ -3,58 +3,74 @@ main {
 }
 
 main div {
-  padding-bottom: 2em;
 }
 
 #results {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 0;
+
 }
 
 .Correct {
   text-align: left;
   flex-direction: column;
+  margin-top:80px
 }
 
-.Correct>:nth-child(1) {
+.Correct > :nth-child(1) {
   font-weight: 400;
 }
 
 .Wrong {
   text-align: right;
   flex-direction: column;
+  margin-top: 80px;
 }
 
-.Wrong>:nth-child(1) {
+.Wrong > :nth-child(1) {
   font-weight: 400;
 }
 
-.base-timer {
-  width: 30%;
-  padding-bottom: 0px;
+#circleContainer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.base-timer__circle {
+#progressCircle {
+  display: block;
+  margin-top: 80px;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+}
+
+#svgCircle {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  height: 320px;
+}
+
+#track {
   fill: none;
-  stroke: none;
+  stroke: #9d1c8e;
+  stroke-width: 29px;
+  transform: rotate(-90deg);
+  transform-origin: center;
 }
 
-.base-timer__path-elapsed {
-  stroke-width: 10px;
-  stroke: #d20094;
-}
-
-
-
-.base-timer > h5 {
-  font-weight: 700;
-}
-
-.base-timer p {
-  font-size: small;
-  padding-top: 20px;
-  color: white;
+#progress {
+  fill: none;
+  stroke: #00fefe;
+  stroke-width: 30px;
+  stroke-dasharray: 628;
+  stroke-dashoffset: -400; /* Mettendo -numero, il cerchio azzurro (domande corrette) si muove in senso antiorario dall cima del cerchio*/
+  transform: rotate(-90deg);
+  transform-origin: center;
 }
 
 .button {
@@ -62,5 +78,5 @@ main div {
   border: 2px solid white;
   color: white;
   box-shadow: none;
-  margin-top: 0;
+  margin-top: 50px;
 }

@@ -16,6 +16,8 @@ main{
 
 .star-feedback img{
     margin:0.5%;
+    
+    
 }
 
 .feedback-form{
@@ -48,4 +50,73 @@ input{
               box-shadow: 0px 0px 50px 0px #0ff;
 
 }
+
+
+.empty-div{
+    display: none;
+}
+
+.alert{
+    border:1px solid gray;
+    background-image:url(../assets/bg.jpg);
+    background-size: cover;
+    color: white;
+    box-shadow: 0px 0px 23px 0px #d20094;
+    position: absolute;
+    z-index: 2;
+    width: 60%;
+    height: 25%;
+    line-height: 3rem;
+}
+
+.alert a{
+    margin:3%;
+    font-size: 1rem;
+    text-decoration: none;
+    
+}
+
+.pFirst{
+    background-color: none;
+    color: white
+}
+
+a{
+    color:white;
+}
+
+.empty-class{
+    display: none;
+}
+
+
+
+.inactive_star{
+    filter:brightness(0.1);
+    filter:(0.3) ;
+    cursor: pointer;
+}
+
+.inactive_star:hover{
+    filter: brightness(1);
+}
+
+.inactive_star.sel{
+    filter:brightness(1);
+}
+
+.star-feedback img{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 
