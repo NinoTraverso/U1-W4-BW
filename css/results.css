@@ -32,7 +32,7 @@ main div {
 
 .base-timer {
   width: 30%;
-  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .base-timer__circle {
