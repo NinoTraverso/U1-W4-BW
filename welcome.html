@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/welcome.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +28,7 @@
     <div>
       <h1>
         Welcome to <br />
-        <span class="bold">your exam</span>
+        <span>your exam</span>
       </h1>
     </div>
 
@@ -35,27 +36,33 @@
       <h3>Instruction</h3>
       <p>
         We don't expected most enginners to know the answers to all of these
+        <br />
         questions, so dont' worry if you're unsure of a few af them
       </p>
       <ul>
         <li>
-          Each question is <span class="bold"> timed </span> and can only be
-          <span class="bold"> answered once </span>
+          Each question is <span> timed </span> and can only be
+          <span> answered once </span>
         </li>
         <li>
           Changing browser tab or opening other windows will
-          <span class="bold"> invalidate the question </span>
+          <span> invalidate the question </span>
         </li>
-        <li>
-          This exam will take approx. <span class="bold">0-5 minutes. </span>
-        </li>
+        <li>This exam will take approx. <span>0-5 minutes. </span></li>
       </ul>
     </div>
 
-    <div>
-      <input type="checkbox" /> I promise to answer my self without help from
-      anyone
+    <div class="footer">
+      <div>
+        <label
+          ><input id="myCheckbox" type="checkbox" />I promise to answer my self
+          without help from anyone</label
+        >
+      </div>
+      <button id="myButton" onclick="controllaCheckbox()" class="button-proced">
+        PROCED
+      </button>
     </div>
-    <div><button type="button">PROCED</button></div>
+    <script src="js/welcome.js"></script>
   </body>
 </html>
