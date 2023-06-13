@@ -37,25 +37,15 @@ p {
   display: inline;
 }
 input[type="checkbox"] {
-  width: 14px !important;
-  height: 14px !important;
+  transform: scale(1.5);
   margin: 5px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
   outline: 2px solid white;
   box-shadow: none;
-  font-size: 0.8em;
   text-align: center;
   line-height: 1em;
   background: transparent;
 }
 
-input[type="checkbox"]:checked:after {
-  content: "✔";
-  color: white;
-}
 button {
   margin-top: 0%;
 }
