@@ -98,13 +98,10 @@ const questions = [
     },
   ];
 
-let i = 0
-
 const questionContainer = document.getElementById("quest-container")
 const addQuestion = (i) => {    // Aggiungo la domanda
   questionContainer.innerText = questions[i].question
 }
-addQuestion(i)
 
 const answersCalculator = (i) => {    // Faccio un array di sole risposte
   const allAnswer = []
@@ -137,16 +134,12 @@ const addAnswer = () => {           // Aggiungo le risposte
   }
   addCheckedClass()
 }
-addAnswer()
 
 const addQuestionNumber = (i) => {    // Aggiungo counter delle domande
   const questionNumber = document.getElementById("questionNumber")
   questionNumber.innerText = i+1
 }
-addQuestionNumber(i)
 
-
-let correctAnswer = 0
 const addAnswerVerification = () => {   // Verifico se la risposta è corretta ed incremento se affermativo
   const divCorrectAnswer = document.querySelector(".checked")
   if(divCorrectAnswer.innerText === questions[i].correct_answer) correctAnswer++
@@ -155,18 +148,14 @@ const addAnswerVerification = () => {   // Verifico se la risposta è corretta e
 
 const goToNextQuestion = () => {
   const btn = document.getElementsByTagName("button")
-  // if(i>9){
-  //   btn[0].addEventListener('click',()=>
-  //   window.location.href='results.html')
-  
   btn[0].addEventListener("click", () => {
-     if ( i < questions.length ) addAnswerVerification()
     i++ 
     if ( i > questions.length - 1) {
       localStorage.setItem("correctAnswer", correctAnswer)
       location.href ="results.html"
     }
     if ( i < questions.length ) {
+      addAnswerVerification()
       const allAnswerDiv = document.querySelectorAll(".answerDiv")
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
@@ -174,8 +163,6 @@ const goToNextQuestion = () => {
     if(i>9){
       window.location.href='results.html'
     }
-
-    
     addQuestion(i)
     answersCalculator(i)
     addAnswer()
@@ -183,4 +170,18 @@ const goToNextQuestion = () => {
     }
   })
 }
-goToNextQuestion()
+
+let i = 0
+let correctAnswer = 0
+addQuestion(i)
+addAnswer()           // Creo la prima pagina di domande e risposte
+addQuestionNumber(i)
+goToNextQuestion()    // Attivo il bottone che richiama le funzioni precedenti
+
+
+// Timer Function
+const timeLimit = 60
+let timePassed = 0
+let timeLeft = timeLimit
+const remainingTime = document.querySelector("#remainingTime")
+remainingTime.innerText = timeLeft

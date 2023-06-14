@@ -9,12 +9,12 @@ header {
 
 .base-timer {
   width: 120px;
+  position: relative;
 }
 
 .base-timer__circle {
   fill: none;
   stroke: none;
-  position: relative;
 }
 
 .base-timer__path-elapsed {
@@ -28,8 +28,8 @@ header {
   flex-direction: column;
   align-items: center;
   font-size: 0.8em;
-  top: 70px;
-  right: 110px;
+  top: 30px;
+  right: 30px;
 }
 
 #remainingTime {
