@@ -1,7 +1,9 @@
-const wrong = 4; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
+let correctAnswers = localStorage.getItem('correctAnswer');
+
+const wrong = 10 - correctAnswers; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
 
 function showResult(input) {
-  if (input >= 5) {
+  if (input >= 4) {
     console.log(
       "Sei stato Bocciato. Non ti buttare giu, sono solo TANTI SOLDI!"
     );
@@ -73,6 +75,22 @@ const button = (document.getElementById("button").onclick = function () {
   window.location.href = "/feedback.html";
 });
 
+//QUESTA FUNZIONE MOSTRA IL TESTO DENTRO IL CERCHIO SE PASSI O NO L'ESAME
+
+const addTextToSvg = function (input) {
+  if (input >= 5) {
+    const failedMessageParent = document.getElementById("svgCircle");
+
+    const failedText = document.getElementById("passingMessage");
+    failedMessageParent.removeChild(failedText);
+  } else {
+    const failedMessageParent = document.getElementById("svgCircle");
+    const passingText = document.getElementById("failingMessage");
+    failedMessageParent.removeChild(passingText);
+  }
+};
+
+addTextToSvg(wrong);
 /*
 function resultPositiveNegative(percentualeTest) {
   const div = document.createElement("div");
