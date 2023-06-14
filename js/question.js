@@ -155,6 +155,10 @@ const addAnswerVerification = () => {   // Verifico se la risposta è corretta e
 
 const goToNextQuestion = () => {
   const btn = document.getElementsByTagName("button")
+  // if(i>9){
+  //   btn[0].addEventListener('click',()=>
+  //   window.location.href='results.html')
+  
   btn[0].addEventListener("click", () => {
      if ( i < questions.length ) addAnswerVerification()
     i++ 
@@ -167,6 +171,11 @@ const goToNextQuestion = () => {
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
     })
+    if(i>9){
+      window.location.href='results.html'
+    }
+
+    
     addQuestion(i)
     answersCalculator(i)
     addAnswer()
