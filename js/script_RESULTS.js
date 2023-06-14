@@ -1,7 +1,8 @@
-const wrong = 4; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
-
+let correctAnswer=localStorage.getItem('correctAnswer')
+const wrong = 10-correctAnswer; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
+console.log(wrong)
 function showResult(input) {
-  if (input >= 5) {
+  if (input <= 4) {
     console.log(
       "Sei stato Bocciato. Non ti buttare giu, sono solo TANTI SOLDI!"
     );
