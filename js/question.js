@@ -142,27 +142,27 @@ const addQuestionNumber = (i) => {    // Aggiungo counter delle domande
 
 const addAnswerVerification = () => {   // Verifico se la risposta è corretta ed incremento se affermativo
   const divCorrectAnswer = document.querySelector(".checked")
-  if(divCorrectAnswer.innerText === questions[i].correct_answer) correctAnswer++
+  if(divCorrectAnswer.innerText === questions[i].correct_answer) {
+    correctAnswer++
+  }
+  console.log(correctAnswer)
   }
 
 
 const goToNextQuestion = () => {
   const btn = document.getElementsByTagName("button")
   btn[0].addEventListener("click", () => {
-    i++ 
     if ( i > questions.length - 1) {
       localStorage.setItem("correctAnswer", correctAnswer)
       location.href ="results.html"
     }
     if ( i < questions.length ) {
       addAnswerVerification()
+      i++ 
       const allAnswerDiv = document.querySelectorAll(".answerDiv")
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
     })
-    if(i>9){
-      window.location.href='results.html'
-    }
     addQuestion(i)
     answersCalculator(i)
     addAnswer()
