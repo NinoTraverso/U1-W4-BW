@@ -185,3 +185,14 @@ let timePassed = 0
 let timeLeft = timeLimit
 const remainingTime = document.querySelector("#remainingTime")
 remainingTime.innerText = timeLeft
+
+let timerInterval = null
+
+const startTimer = () => {
+  timerInterval = setInterval(() => {
+    timePassed += 1 
+    timeLeft = timeLimit - timePassed
+    remainingTime.innerText = timeLeft
+  })
+}
+startTimer()
