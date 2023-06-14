@@ -24,7 +24,7 @@ main {
   margin-left: 0;
   border-left: 0;
   padding-left: 0;
-  padding-bottom: 5px
+  padding-bottom: 5px;
 }
 .Wrong {
   text-align: right;
@@ -41,7 +41,7 @@ main {
   margin-right: 0;
   border-right: 0;
   padding-right: 0;
-  padding-bottom: 5px
+  padding-bottom: 5px;
 }
 
 #circleContainer {
@@ -94,5 +94,25 @@ main {
 
 .button {
   position: relative;
-  top: -5px; 
+  top: -5px;
+}
+
+#Congratulations {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#YouPassedTheExam {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#HeyChamp {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#youDidNotPass {
+  font-size: 22px;
+  font-weight: 700;
 }
