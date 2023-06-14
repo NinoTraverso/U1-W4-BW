@@ -4,8 +4,10 @@ function controllaCheckbox() {
     if (checkbox.checked) {
       window.location.href = "question.html";
     } else {
-      
-      alert("Devi spuntare la checkbox per proseguire.");
+        button.disabled
+        
+        // possibilità di inserire un allert al posto di disabilitare il pulsante
+    //   alert("Devi spuntare la checkbox per proseguire.");
     }
   }
   
