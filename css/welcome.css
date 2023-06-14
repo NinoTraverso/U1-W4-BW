@@ -37,7 +37,7 @@ p {
   display: inline;
 }
 input[type="checkbox"] {
-  display: none;
+   display: none; 
   transform: scale(1.5);
   margin: 5px;
   outline: 2px solid white;
