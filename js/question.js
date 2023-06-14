@@ -162,6 +162,9 @@ const goToNextQuestion = () => {
   btn[0].addEventListener("click", () => {
     addAnswerVerification()
     i++
+    if ( i > questions.length - 1) {
+      location.href ="results.html"
+    }
     const allAnswerDiv = document.querySelectorAll(".answerDiv")
     allAnswerDiv.forEach(div => {
       div.classList.add("remove")
@@ -179,44 +182,3 @@ const goToNextQuestion = () => {
 }
 goToNextQuestion()
 
-
-
-
-// const questionContainer = document.createElement("div")
-// const questionText = document.createElement("p")
-// const mainContent = document.getElementById("quest-container")
-// mainContent.appendChild(questionContainer)
-// questionContainer.appendChild(questionText)
-
-// const selectQuestion = () => {
-//     let counter = 0
-//     questions.forEach(el => {
-//         questionText.innerText = el.question
-//         console.log(questionText.innerText)
-//         const allAnswer = []
-//         allAnswer.push(el.correct_answer)
-//         el.incorrect_answers.forEach(incorrect => {
-//             allAnswer.push(incorrect)  // Tutte le risposte
-//         })
-//         // console.log(allAnswer)
-//         let selectedAnswer = []
-//         for ( let i = 0; i < allAnswer.length; i++) {
-//         const selectAnswer = () => {
-//         let rngAnswer = Math.floor(Math.random()*allAnswer.length)
-//         if (selectedAnswer.includes(allAnswer[rngAnswer])) {
-//             selectAnswer()
-//         } else {
-//         let answerDiv = document.createElement("div")
-//         answerDiv.innerHTML = `
-//         <label><input type = "radio" name = "answer" required/>${allAnswer[rngAnswer]}</label>`
-//         mainContent.appendChild(answerDiv)
-//         selectedAnswer.push(allAnswer[rngAnswer])}
-//         }
-//         selectAnswer()} 
-//         const questionNumber = document.getElementById("questionNumber") 
-//         counter += 1
-//         questionNumber.innerText = counter
-//     })
-//     }
-
-// selectQuestion()
