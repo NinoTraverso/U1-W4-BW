@@ -19,7 +19,7 @@ header {
 
 .base-timer__path-elapsed {
   stroke-width: 10px;
-  stroke: #D20094;
+  stroke: #d20094;
 }
 
 .base-timer-label {
@@ -53,21 +53,48 @@ main {
 main p {
   margin-bottom: 5%;
 }
+#answer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
 
 .answerDiv {
+  width: 35%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255, 0.2);
+  color: blanchedalmond;
+  border: 2px solid white;
+  border-radius: 70px;
+
+  cursor: pointer;
+  margin: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.answerDiv:hover {
+  border-color: rgb(255, 0, 200);
+}
+
+/* .answerDiv {
   width: 25%;
   margin: 2%;
   padding: 2.5%;
   border: 2px outset #00ffff;
-  border-radius: 25px;
-}
-
+  border-radius: 25px; */
+/* } */
 input {
   display: none;
 }
 
 .checked {
-  background-color: #D20094;
+  background-color: #d20094;
 }
 
 .remove {
@@ -80,6 +107,6 @@ footer p {
 }
 
 footer span:nth-of-type(2) {
-  color: #D20094;
+  color: #d20094;
   font-weight: bold;
 }
