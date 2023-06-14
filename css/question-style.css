@@ -17,6 +17,10 @@ header {
   stroke: none;
 }
 
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
 .base-timer__path-elapsed {
   stroke-width: 10px;
   stroke: #d20094;
@@ -30,6 +34,17 @@ header {
   font-size: 0.8em;
   top: 30px;
   right: 30px;
+}
+
+.base-timer__path-remaining {
+  width: 120px;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  stroke: currentColor;
+  color: #00ffff;
 }
 
 #remainingTime {

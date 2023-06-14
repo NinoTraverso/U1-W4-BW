@@ -147,9 +147,8 @@ const addAnswerVerification = () => {   // Verifico se la risposta è corretta e
   }
   }
 
-
-const goToNextQuestion = () => {
-  const btn = document.getElementsByTagName("button")
+const goToNextQuestion = () => {      // Aggiungo evento al click del bottone che lancia le funzioni precedenti o 
+  const btn = document.getElementsByTagName("button")     // passa alla prossima pagina se è l'ultima domanda
   btn[0].addEventListener("click", () => {
     addAnswerVerification()
       i++ 
@@ -182,6 +181,7 @@ goToNextQuestion()    // Attivo il bottone che richiama le funzioni precedenti
 const timeLimit = 60
 let timePassed = 0
 let timeLeft = timeLimit
+let fullDashArray = 283
 const remainingTime = document.querySelector("#remainingTime")
 remainingTime.innerText = timeLeft
 
@@ -189,9 +189,24 @@ let timerInterval = null
 
 const startTimer = () => {
   timerInterval = setInterval(() => {
-    timePassed += 1 
+    timePassed = timePassed += 1 
     timeLeft = timeLimit - timePassed
     remainingTime.innerText = timeLeft
-  })
+    setCircleDasharray();
+  }, 1000)
 }
 startTimer()
+
+// Divides time left by the defined time limit.
+function calculateTimeFraction() {
+  return timeLeft / timeLimit;
+}
+    
+// Update the dasharray value as time passes, starting with 283
+function setCircleDasharray() {
+  const circleDasharray = [(calculateTimeFraction() * fullDashArray.toFixed(0)), 283]
+  console.log(circleDasharray)
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
