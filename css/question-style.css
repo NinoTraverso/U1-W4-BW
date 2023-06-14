@@ -14,6 +14,7 @@ header {
 .base-timer__circle {
   fill: none;
   stroke: none;
+  position: relative;
 }
 
 .base-timer__path-elapsed {
@@ -21,6 +22,20 @@ header {
   stroke: #d20094;
 }
 
+.base-timer-label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8em;
+  top: 10%;
+  right: 8.4%;
+}
+
+#remainingTime {
+  font-size: 2rem;
+  margin: 5%;
+}
 main {
   text-align: center;
   margin-bottom: 5%;
