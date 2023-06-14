@@ -1,6 +1,6 @@
-// localStorage.getItem(correctAnswers)
+let correctAnswers = localStorage.getItem('correctAnswer');
 
-const wrong = 5; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
+const wrong = 10 - correctAnswers; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
 
 function showResult(input) {
   if (input >= 5) {
@@ -81,12 +81,13 @@ const addTextToSvg = function (input) {
   if (input >= 5) {
     const failedMessageParent = document.getElementById("svgCircle");
 
-    const failedText = document.getElementById('passingMessage');
-    failedMessageParent.removeChild(failedText)
+    const failedText = document.getElementById("passingMessage");
+    failedMessageParent.removeChild(failedText);
   } else {
-  const failedMessageParent = document.getElementById("svgCircle");
-  const passingText = document.getElementById('failingMessage');
-  failedMessageParent.removeChild(passingText)}
+    const failedMessageParent = document.getElementById("svgCircle");
+    const passingText = document.getElementById("failingMessage");
+    failedMessageParent.removeChild(passingText);
+  }
 };
 
 addTextToSvg(wrong);
