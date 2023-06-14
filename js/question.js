@@ -145,20 +145,19 @@ const addAnswerVerification = () => {   // Verifico se la risposta è corretta e
   if(divCorrectAnswer.innerText === questions[i].correct_answer) {
     correctAnswer++
   }
-  console.log(correctAnswer)
   }
 
 
 const goToNextQuestion = () => {
   const btn = document.getElementsByTagName("button")
   btn[0].addEventListener("click", () => {
+    addAnswerVerification()
+      i++ 
     if ( i > questions.length - 1) {
       localStorage.setItem("correctAnswer", correctAnswer)
       location.href ="results.html"
     }
     if ( i < questions.length ) {
-      addAnswerVerification()
-      i++ 
       const allAnswerDiv = document.querySelectorAll(".answerDiv")
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
