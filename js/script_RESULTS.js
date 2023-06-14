@@ -1,4 +1,6 @@
-const wrong = 4; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
+// localStorage.getItem(correctAnswers)
+
+const wrong = 5; // Questo cambia il valore del cerchio blu in base al numero di risposte sbagliate.
 
 function showResult(input) {
   if (input >= 5) {
@@ -73,6 +75,21 @@ const button = (document.getElementById("button").onclick = function () {
   window.location.href = "/feedback.html";
 });
 
+//QUESTA FUNZIONE MOSTRA IL TESTO DENTRO IL CERCHIO SE PASSI O NO L'ESAME
+
+const addTextToSvg = function (input) {
+  if (input >= 5) {
+    const failedMessageParent = document.getElementById("svgCircle");
+
+    const failedText = document.getElementById('passingMessage');
+    failedMessageParent.removeChild(failedText)
+  } else {
+  const failedMessageParent = document.getElementById("svgCircle");
+  const passingText = document.getElementById('failingMessage');
+  failedMessageParent.removeChild(passingText)}
+};
+
+addTextToSvg(wrong);
 /*
 function resultPositiveNegative(percentualeTest) {
   const div = document.createElement("div");
