@@ -145,7 +145,6 @@ const addAnswerVerification = () => {   // Verifico se la risposta è corretta e
   if(divCorrectAnswer.innerText === questions[i].correct_answer) {
     correctAnswer++
   }
-  console.log(correctAnswer)
   }
 
 
