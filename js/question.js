@@ -156,20 +156,22 @@ const addAnswerVerification = () => {   // Verifico se la risposta è corretta e
 const goToNextQuestion = () => {
   const btn = document.getElementsByTagName("button")
   btn[0].addEventListener("click", () => {
-    addAnswerVerification()
-    i++
+     if ( i < questions.length ) addAnswerVerification()
+    i++ 
     if ( i > questions.length - 1) {
+      localStorage.setItem("correctAnswer", correctAnswer)
       location.href ="results.html"
     }
-    const allAnswerDiv = document.querySelectorAll(".answerDiv")
-    allAnswerDiv.forEach(div => {
+    if ( i < questions.length ) {
+      const allAnswerDiv = document.querySelectorAll(".answerDiv")
+      allAnswerDiv.forEach(div => {
       div.classList.add("remove")
     })
     addQuestion(i)
     answersCalculator(i)
     addAnswer()
     addQuestionNumber(i)
+    }
   })
 }
 goToNextQuestion()
-
