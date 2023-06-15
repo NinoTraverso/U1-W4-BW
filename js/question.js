@@ -213,6 +213,9 @@ const startTimer = () => {
   timePassed = 0
   timeLeft = timeLimit
   fullDashArray = 283
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", fullDashArray)
   const remainingTime = document.querySelector("#remainingTime")
   remainingTime.innerText = timeLeft
   timerInterval = setInterval(() => {
@@ -256,3 +259,6 @@ function setCircleDashArray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDashArray);
 }
+
+
+console.log(document.styleSheets)
