@@ -46,10 +46,11 @@ p {
   display: inline;
 }
 input[type="checkbox"] {
+  accent-color: #900080;
   transform: scale(1.5);
   outline: 2px solid white;
   background: transparent;
-  margin-right: 5%;
+  margin-right: 2.5%;
 }
 
 button {

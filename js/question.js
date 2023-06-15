@@ -102,7 +102,7 @@ const questionContainer = document.getElementById("quest-container")
 const addQuestion = (i) => {    // Aggiungo la domanda
   questionContainer.innerText = questions[i].question
   const btn = document.getElementsByTagName("button") 
-  if ( i === questions.length - 1) btn[0].innerText = "GO TO RESULTS"
+  if ( questions.length === 1) btn[0].innerText = "GO TO RESULTS"
 }
 
 const answersCalculator = (i) => {    // Faccio un array di sole risposte
@@ -137,20 +137,21 @@ const addAnswer = () => {           // Aggiungo le risposte
   addCheckedClass()
 }
 
-const addQuestionNumber = (i) => {    // Aggiungo counter delle domande
+const addQuestionNumber = () => {    // Aggiungo counter delle domande
   const questionNumber = document.getElementById("questionNumber")
-  questionNumber.innerText = i+1
+  questionNumber.innerText = questionCounter
+  questionCounter += 1
 }
 
 const addAnswerVerification = () => {   // Verifico se la risposta è corretta ed incremento se affermativo
   const divCorrectAnswer = document.querySelector(".checked")
   if (divCorrectAnswer === null) {
     i++ 
-    if ( i > questions.length - 1) {
+    if ( questions.length === 0) {
       localStorage.setItem("correctAnswer", correctAnswer)
       location.href ="results.html"
     }
-    if ( i < questions.length ) {
+    if ( questions.length > 0) {
       const allAnswerDiv = document.querySelectorAll(".answerDiv")
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
@@ -169,18 +170,18 @@ const addAnswerVerification = () => {   // Verifico se la risposta è corretta e
   }
 
 const goToNextQuestion = () => {      // Aggiungo evento al click del bottone che lancia le funzioni precedenti o 
-  const btn = document.getElementsByTagName("button")     // passa alla prossima pagina se è l'ultima domanda
+  const btn = document.getElementsByTagName("button")         // passa alla prossima pagina se è l'ultima domanda
   btn[0].addEventListener("click", () => {
     clearInterval(timerInterval)
-    addAnswerVerification()
-      i++ 
-    if ( i > questions.length - 1) {
+    console.log(questions)  
+    addAnswerVerification() 
+    questions.splice( i, 1) 
+      i = Math.floor(Math.random() * questions.length)
+    if ( questions.length === 0) {
       localStorage.setItem("correctAnswer", correctAnswer)
-      location.href ="results.html"
+      location.href ="results.html"                        
     }
-    if ( i < questions.length ) {
-      addAnswerVerification()
-      i++ 
+    if ( questions.length > 0) {
       const allAnswerDiv = document.querySelectorAll(".answerDiv")
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
@@ -194,7 +195,8 @@ const goToNextQuestion = () => {      // Aggiungo evento al click del bottone ch
   })
 }
 
-let i = 0
+let i = Math.floor(Math.random() * questions.length)
+let questionCounter = 1
 let correctAnswer = 0
 addQuestion(i)
 addAnswer()           // Creo la prima pagina di domande e risposte
