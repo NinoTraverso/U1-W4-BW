@@ -78,7 +78,7 @@ const button = (document.getElementById("button").onclick = function () {
 //QUESTA FUNZIONE MOSTRA IL TESTO DENTRO IL CERCHIO SE PASSI O NO L'ESAME
 
 const addTextToSvg = function (input) {
-  if (input >= 4) {
+  if (input > 4) {
     const failedMessageParent = document.getElementById("svgCircle");
 
     const failedText = document.getElementById("passingMessage");
