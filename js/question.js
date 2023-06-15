@@ -259,6 +259,3 @@ function setCircleDashArray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDashArray);
 }
-
-
-console.log(document.styleSheets)
