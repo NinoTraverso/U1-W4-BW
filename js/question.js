@@ -142,6 +142,24 @@ const addQuestionNumber = (i) => {    // Aggiungo counter delle domande
 
 const addAnswerVerification = () => {   // Verifico se la risposta è corretta ed incremento se affermativo
   const divCorrectAnswer = document.querySelector(".checked")
+  if (divCorrectAnswer === null) {
+    i++ 
+    if ( i > questions.length - 1) {
+      localStorage.setItem("correctAnswer", correctAnswer)
+      location.href ="results.html"
+    }
+    if ( i < questions.length ) {
+      const allAnswerDiv = document.querySelectorAll(".answerDiv")
+      allAnswerDiv.forEach(div => {
+      div.classList.add("remove")
+    })
+    addQuestion(i)
+    answersCalculator(i)
+    addAnswer()
+    addQuestionNumber(i)
+    goToNextQuestion() 
+    startTimer()
+  }}
   if(divCorrectAnswer.innerText === questions[i].correct_answer) {
     correctAnswer++
   }
@@ -150,6 +168,7 @@ const addAnswerVerification = () => {   // Verifico se la risposta è corretta e
 const goToNextQuestion = () => {      // Aggiungo evento al click del bottone che lancia le funzioni precedenti o 
   const btn = document.getElementsByTagName("button")     // passa alla prossima pagina se è l'ultima domanda
   btn[0].addEventListener("click", () => {
+    clearInterval(timerInterval)
     addAnswerVerification()
       i++ 
     if ( i > questions.length - 1) {
@@ -165,6 +184,7 @@ const goToNextQuestion = () => {      // Aggiungo evento al click del bottone ch
     answersCalculator(i)
     addAnswer()
     addQuestionNumber(i)
+    startTimer()
     }
   })
 }
@@ -178,21 +198,28 @@ goToNextQuestion()    // Attivo il bottone che richiama le funzioni precedenti
 
 
 // Timer Function
-const timeLimit = 60
+
+let timeLimit = 60
 let timePassed = 0
 let timeLeft = timeLimit
 let fullDashArray = 283
 const remainingTime = document.querySelector("#remainingTime")
 remainingTime.innerText = timeLeft
 
-let timerInterval = null
+let timerInterval = 0
 
 const startTimer = () => {
+  timeLimit = 60
+  timePassed = 0
+  timeLeft = timeLimit
+  fullDashArray = 283
+  const remainingTime = document.querySelector("#remainingTime")
+  remainingTime.innerText = timeLeft
   timerInterval = setInterval(() => {
-    timePassed = timePassed += 1 
+    timePassed += 1 
     timeLeft = timeLimit - timePassed
     remainingTime.innerText = timeLeft
-    setCircleDasharray();
+    setCircleDashArray();
   }, 1000)
 }
 startTimer()
@@ -203,10 +230,29 @@ function calculateTimeFraction() {
 }
     
 // Update the dasharray value as time passes, starting with 283
-function setCircleDasharray() {
-  const circleDasharray = [(calculateTimeFraction() * fullDashArray.toFixed(0)), 283]
-  console.log(circleDasharray)
+function setCircleDashArray() {
+  const circleDashArray = [(calculateTimeFraction() * fullDashArray.toFixed(0)), 283]
+  if ( circleDashArray[0] <= 0) {
+    clearInterval(timerInterval)
+    addAnswerVerification()
+      i++ 
+    if ( i > questions.length - 1) {
+      localStorage.setItem("correctAnswer", correctAnswer)
+      location.href ="results.html"
+    }
+    if ( i < questions.length ) {
+      const allAnswerDiv = document.querySelectorAll(".answerDiv")
+      allAnswerDiv.forEach(div => {
+      div.classList.add("remove")
+    })
+    addQuestion(i)
+    answersCalculator(i)
+    addAnswer()
+    addQuestionNumber(i)
+    goToNextQuestion() 
+    startTimer()
+  }}
   document
     .getElementById("base-timer-path-remaining")
-    .setAttribute("stroke-dasharray", circleDasharray);
+    .setAttribute("stroke-dasharray", circleDashArray);
 }

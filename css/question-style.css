@@ -1,6 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5%;
 }
 
 #logo {
@@ -31,9 +32,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.8em;
-  top: 30px;
-  right: 30px;
+  font-size: 0.6em;
+  top: 32px;
+  right: 32px;
 }
 
 .base-timer__path-remaining {
@@ -52,8 +53,15 @@ header {
   margin: 5%;
 }
 main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  margin-bottom: 5%;
+}
+
+main button {
+  margin-bottom: 3%;
+  margin-top: 5%;
 }
 
 #answer-container {
@@ -71,25 +79,21 @@ main p {
 #answer-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .answerDiv {
-  width: 35%;
-  height: 2rem;
+  width: 30%;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(255, 255, 255, 0.2);
   color: blanchedalmond;
-  border: 2px solid white;
+  border: 2px outset white;
   border-radius: 70px;
-
-  /* box-shadow: -2px -2px 8px white; */
   cursor: pointer;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1% 2.5%;
+  padding: 2.5%;
   font-weight: 600;
   font-size: 0.9em;
 }
@@ -98,13 +102,6 @@ main p {
   border-color: rgb(255, 0, 200);
 }
 
-/* .answerDiv {
-  width: 25%;
-  margin: 2%;
-  padding: 2.5%;
-  border: 2px outset #00ffff;
-  border-radius: 25px; */
-/* } */
 input {
   display: none;
 }
