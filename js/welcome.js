@@ -6,7 +6,8 @@ function controllaCheckbox() {
     } else {
         button.disabled
         
-        // possibilità di inserire un allert al posto di disabilitare il pulsante
+        
+        // possibilità di inserire un alert al posto di disabilitare il pulsante
     //   alert("Devi spuntare la checkbox per proseguire.");
     }
   }

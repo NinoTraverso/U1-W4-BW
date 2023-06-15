@@ -75,6 +75,9 @@ main button {
 
 main p {
   margin-bottom: 5%;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 30px;
 }
 #answer-container {
   display: flex;
@@ -87,7 +90,7 @@ main p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255, 0.2);
+  background-color: rgb(255, 255, 255, 0.1);
   color: blanchedalmond;
   border: 2px outset white;
   border-radius: 70px;
@@ -99,7 +102,7 @@ main p {
 }
 
 .answerDiv:hover {
-  border-color: rgb(255, 0, 200);
+  background-color: #900080; 
 }
 
 input {
@@ -107,7 +110,7 @@ input {
 }
 
 .checked {
-  background-color: #d20094;
+  background-color: #D20094;
 }
 
 .remove {
