@@ -101,6 +101,8 @@ const questions = [
 const questionContainer = document.getElementById("quest-container")
 const addQuestion = (i) => {    // Aggiungo la domanda
   questionContainer.innerText = questions[i].question
+  const btn = document.getElementsByTagName("button") 
+  if ( i === questions.length - 1) btn[0].innerText = "GO TO RESULTS"
 }
 
 const answersCalculator = (i) => {    // Faccio un array di sole risposte
