@@ -102,9 +102,11 @@
         <p>Leave us an open feedback about your experience so far</p>
         <form class="feedback-form">
           <input
+            class="inp"
             type="text"
-            placeholder="       Write your comment here"
+            placeholder=" Write your comment here"
             required
+            oninvalid="this.setCustomValidity('Rate us with stars and leave a comment')"
           />
           <button class="button-feedback">MORE INFO</button>
         </form>
