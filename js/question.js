@@ -104,7 +104,7 @@ const mediumQuestions = [        //MEDIUM QUESTIONS
     category:"Science: Computers",
     type:"boolean",
     difficulty:"medium",
-    question:"The common software-programming acronym &quot;I18N&quot; comes from the term &quot;Interlocalization&quot;.",
+    question:'The common software-programming acronym "I18N" comes from the term "Interlocalization".',
     correct_answer:"False",
     incorrect_answers:["True"],
   },
@@ -128,7 +128,7 @@ const mediumQuestions = [        //MEDIUM QUESTIONS
     category:"Science: Computers",
     type:"multiple",
     difficulty:"medium",
-    question:"What does &quot;LCD&quot; stand for?",
+    question:'What does "LCD" stand for?',
     correct_answer:"Liquid Crystal Display",
     incorrect_answers:["Language Control Design","Last Common Difference","Long Continuous Design"]
   },
