@@ -96,6 +96,7 @@ main {
 .button {
   position: relative;
   top: -5px;
+  font-family: 'Outfit', sans-serif;  
 }
 
 #button:hover {
