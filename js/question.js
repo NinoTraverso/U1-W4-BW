@@ -1,4 +1,4 @@
-const questions = [
+const questions = [       // EASY QUESTIONS
     {
       category: "Science: Computers",
       type: "multiple",
@@ -98,17 +98,211 @@ const questions = [
     },
   ];
 
+
+const mediumQuestions = [        //MEDIUM QUESTIONS
+  {
+    category:"Science: Computers",
+    type:"boolean",
+    difficulty:"medium",
+    question:"The common software-programming acronym &quot;I18N&quot; comes from the term &quot;Interlocalization&quot;.",
+    correct_answer:"False",
+    incorrect_answers:["True"],
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"medium",
+    question:"What did the name of the Tor Anonymity Network orignially stand for?",
+    correct_answer:"The Onion Router",
+    incorrect_answers:["The Only Router","The Orange Router","The Ominous Router"],
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"medium",
+    question:"Which coding language was the #1 programming language in terms of usage on GitHub in 2015?",
+    correct_answer:"JavaScript",
+    incorrect_answers:["C#","Python","PHP"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"medium",
+    question:"What does &quot;LCD&quot; stand for?",
+    correct_answer:"Liquid Crystal Display",
+    incorrect_answers:["Language Control Design","Last Common Difference","Long Continuous Design"]
+  },
+  {
+    category:"Science: Computers",
+    type:"boolean",
+    difficulty:"medium",
+    question:"The first dual-core CPU was the Intel Pentium D.",
+    correct_answer:"False",
+    incorrect_answers:["True"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"medium",
+    question:".rs is the top-level domain for what country?",
+    correct_answer:"Serbia",
+    incorrect_answers:["Romania","Russia","Rwanda"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"medium",
+    question:"What was the first Android version specifically optimized for tablets?",
+    correct_answer:"Honeycomb",
+    incorrect_answers:["Eclair","Froyo","Marshmellow"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"medium",
+    question:"Which of these people was NOT a founder of Apple Inc?",
+    correct_answer:"Jonathan Ive",
+    incorrect_answers:["Steve Jobs","Ronald Wayne","Steve Wozniak"]
+  },
+  {
+    category:"Science: Computers",
+    type:"boolean",
+    difficulty:"medium",
+    question:"Linus Sebastian is the creator of the Linux kernel, which went on to be used in Linux, Android, and Chrome OS.",
+    correct_answer:"False",
+    incorrect_answers:["True"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"medium",
+    question:"How many bytes are in a single Kibibyte?",
+    correct_answer:"1024",
+    incorrect_answers:["2400","1000","1240"]
+  }
+]
+
+
+const hardQuestions = [           // HARD QUESTIONS
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"The Harvard architecture for micro-controllers added which additional bus?",
+    correct_answer:"Instruction",
+    incorrect_answers:["Address","Data","Control"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"What was the name of the security vulnerability found in Bash in 2014?",
+    correct_answer:"Shellshock",
+    incorrect_answers:["Heartbleed","Bashbug","Stagefright"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"What port does HTTP run on?",
+    correct_answer:"80",
+    incorrect_answers:["53","443","23"]
+  },
+  {
+    category:"Science: Computers",
+    type:"boolean",
+    difficulty:"hard",
+    question:"DHCP stands for Dynamic Host Configuration Port.",
+    correct_answer:"False",
+    incorrect_answers:["True"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"Which of these was the name of a bug found in April 2014 in the publicly available OpenSSL cryptography library?",
+    correct_answer:"Heartbleed",
+    incorrect_answers:["Shellshock","Corrupted Blood","Shellscript"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"Who is the original author of the realtime physics engine called PhysX?",
+    correct_answer:"NovodeX",
+    incorrect_answers:["Ageia","Nvidia","AMD"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"Which data structure does FILO apply to?",
+    correct_answer:"Stack",
+    incorrect_answers:["Queue","Heap","Tree"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"America Online (AOL) started out as which of these online service providers?",
+    correct_answer:"Quantum Link",
+    incorrect_answers:["CompuServe","Prodigy","GEnie"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"Which of the following computer components can be built using only NAND gates?",
+    correct_answer:"ALU",
+    incorrect_answers:["CPU","RAM","Register"]
+  },
+  {
+    category:"Science: Computers",
+    type:"multiple",
+    difficulty:"hard",
+    question:"What is the codename of the eighth generation Intel Core micro-architecture launched in October 2017?",
+    correct_answer:"Coffee Lake",
+    incorrect_answers:["Sandy Bridge","Skylake","Broadwell"]
+  }
+]
+
+
+const startButton = document.getElementById("start")
+startButton.addEventListener("click", () => {
+  const hiddenItems = document.querySelectorAll(".hidden")
+  hiddenItems.forEach(el => el.classList.remove("hidden"))
+  const divSelectedDifficulty = document.querySelector(".checked")
+  switch ( divSelectedDifficulty.innerText) {
+    case "EASY" : difficultyQuestion = questions
+    break
+    case "MEDIUM": difficultyQuestion = mediumQuestions
+    break
+    case "HARD": difficultyQuestion = hardQuestions
+    break
+  }
+  const startElements = document.querySelector(".difficultySelection")
+  startElements.classList.add("hidden") 
+
+  addQuestion(i, difficultyQuestion)
+  addAnswer(difficultyQuestion)           
+  addQuestionNumber(i)
+  goToNextQuestion(difficultyQuestion) 
+  startTimer()
+})
+
+
+
 const questionContainer = document.getElementById("quest-container")
-const addQuestion = (i) => {    // Aggiungo la domanda
-  questionContainer.innerText = questions[i].question
+const addQuestion = (i, difficultyQuestion) => {    // Aggiungo la domanda
+  questionContainer.innerText = difficultyQuestion[i].question
   const btn = document.getElementsByTagName("button") 
   if ( questions.length === 1) btn[0].innerText = "GO TO RESULTS"
 }
 
-const answersCalculator = (i) => {    // Faccio un array di sole risposte
+const answersCalculator = (i, difficultyQuestion) => {    // Faccio un array di sole risposte
   const allAnswer = []
-  allAnswer.push(questions[i].correct_answer)
-  questions[i].incorrect_answers.forEach(answer => allAnswer.push(answer))
+  allAnswer.push(difficultyQuestion[i].correct_answer)
+  difficultyQuestion[i].incorrect_answers.forEach(answer => allAnswer.push(answer))
   return allAnswer
 }
 
@@ -120,8 +314,10 @@ const addCheckedClass = () => {     // Aggiungo checked class quando cliccato
   }))
 }
 
-const addAnswer = () => {           // Aggiungo le risposte
-  let allAnswer = answersCalculator(i)
+addCheckedClass()
+
+const addAnswer = (difficultyQuestion) => {           // Aggiungo le risposte
+  let allAnswer = answersCalculator(i, difficultyQuestion)
   const mainAnswer = document.getElementById("answer-container")
   for (let j = 0; j <= allAnswer.length; j++) {
     let rngAnswer = Math.floor(Math.random()*allAnswer.length)
@@ -143,52 +339,50 @@ const addQuestionNumber = () => {    // Aggiungo counter delle domande
   questionCounter += 1
 }
 
-const addAnswerVerification = () => {   // Verifico se la risposta è corretta ed incremento se affermativo
+const addAnswerVerification = (difficultyQuestion) => {   // Verifico se la risposta è corretta ed incremento se affermativo
   const divCorrectAnswer = document.querySelector(".checked")
   if (divCorrectAnswer === null) {
-    i++ 
-    if ( questions.length === 0) {
+    i = Math.floor(Math.random() * difficultyQuestion.length)
+    if ( difficultyQuestion.length === 0) {
       localStorage.setItem("correctAnswer", correctAnswer)
       location.href ="results.html"
     }
-    if ( questions.length > 0) {
+    if ( difficultyQuestion.length > 0) {
       const allAnswerDiv = document.querySelectorAll(".answerDiv")
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
     })
-    addQuestion(i)
-    answersCalculator(i)
-    addAnswer()
+    addQuestion(i, difficultyQuestion)
+    answersCalculator(i, difficultyQuestion)
+    addAnswer(difficultyQuestion)
     addQuestionNumber(i)
-    goToNextQuestion() 
+    goToNextQuestion(difficultyQuestion) 
     startTimer()
   }}
-  if(divCorrectAnswer.innerText === questions[i].correct_answer) {
+  if(divCorrectAnswer.innerText === difficultyQuestion[i].correct_answer) {
     correctAnswer++
   }
-  console.log(correctAnswer)
   }
 
-const goToNextQuestion = () => {      // Aggiungo evento al click del bottone che lancia le funzioni precedenti o 
+const goToNextQuestion = (difficultyQuestion) => {      // Aggiungo evento al click del bottone che lancia le funzioni precedenti o 
   const btn = document.getElementsByTagName("button")         // passa alla prossima pagina se è l'ultima domanda
-  btn[0].addEventListener("click", () => {
-    clearInterval(timerInterval)
-    console.log(questions)  
-    addAnswerVerification() 
-    questions.splice( i, 1) 
-      i = Math.floor(Math.random() * questions.length)
-    if ( questions.length === 0) {
+  btn[1].addEventListener("click", () => {
+    clearInterval(timerInterval) 
+    addAnswerVerification(difficultyQuestion) 
+    difficultyQuestion.splice( i, 1) 
+      i = Math.floor(Math.random() * difficultyQuestion.length)
+    if ( difficultyQuestion.length === 0) {
       localStorage.setItem("correctAnswer", correctAnswer)
       location.href ="results.html"                        
     }
-    if ( questions.length > 0) {
+    if ( difficultyQuestion.length > 0) {
       const allAnswerDiv = document.querySelectorAll(".answerDiv")
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
     })
-    addQuestion(i)
-    answersCalculator(i)
-    addAnswer()
+    addQuestion(i, difficultyQuestion)
+    answersCalculator(i, difficultyQuestion)
+    addAnswer(difficultyQuestion)
     addQuestionNumber(i)
     startTimer()
     }
@@ -198,10 +392,6 @@ const goToNextQuestion = () => {      // Aggiungo evento al click del bottone ch
 let i = Math.floor(Math.random() * questions.length)
 let questionCounter = 1
 let correctAnswer = 0
-addQuestion(i)
-addAnswer()           // Creo la prima pagina di domande e risposte
-addQuestionNumber(i)
-goToNextQuestion()    // Attivo il bottone che richiama le funzioni precedenti
 
 
 // Timer Function
@@ -232,7 +422,7 @@ const startTimer = () => {
     setCircleDashArray();
   }, 1000)
 }
-startTimer()
+
 
 // Divides time left by the defined time limit.
 function calculateTimeFraction() {

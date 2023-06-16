@@ -84,6 +84,16 @@ main p {
   flex-wrap: wrap;
 }
 
+.difficultySelection {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
 .answerDiv {
   width: 30%;
   height: 1.5rem;
@@ -92,7 +102,7 @@ main p {
   justify-content: center;
   background-color: rgb(255, 255, 255, 0.1);
   color: blanchedalmond;
-  border: 2px outset white;
+  border: 4px outset white;
   border-radius: 70px;
   cursor: pointer;
   margin: 1% 2.5%;
@@ -125,4 +135,8 @@ footer p {
 footer span:nth-of-type(2) {
   color: #d20094;
   font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }

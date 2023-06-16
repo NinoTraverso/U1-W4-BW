@@ -11,7 +11,7 @@
   <body>
     <header>
       <img id="logo" src="assets/epicode_logo.png" alt="Logo" />
-      <div class="base-timer">
+      <div class="hidden base-timer">
         <svg
           class="base-timer__svg"
           viewBox="0 0 100 100"
@@ -39,14 +39,21 @@
         </p>
       </div>
     </header>
-    <main>
+    <div class="difficultySelection">
+      <h2>SELECT YOUR DIFFICULTY</h2>
+      <div class="answerDiv"><h3>EASY</h3></div>
+      <div class="answerDiv"><h3>MEDIUM</h3></div>
+      <div class="answerDiv"><h3>HARD</h3></div>
+      <button id="start">START</button>
+    </div>
+    <main class="hidden">
       <div>
         <p id="quest-container"></p>
       </div>
       <div id="answer-container"></div>
       <button>NEXT QUESTION</button>
     </main>
-    <footer>
+    <footer class="hidden">
       <p class="question-counter">
         QUESTION <span id="questionNumber"></span><span>/ 10</span>
       </p>
