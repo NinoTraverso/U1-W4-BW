@@ -44,7 +44,14 @@
       <div class="answerDiv"><h3>EASY</h3></div>
       <div class="answerDiv"><h3>MEDIUM</h3></div>
       <div class="answerDiv"><h3>HARD</h3></div>
-      <button id="start">START</button>
+      <div id="mixedQuestions">
+        <div class="answerDiv"><h3>MIXED</h3></div>
+        <div class="divNumberOfQuestions">
+          <div>How many questions?</div>
+          <input type="text" id="numberOfQuestions" min="10" max="30" />
+        </div>
+      </div>
+      <button id="start" disabled>START</button>
     </div>
     <main class="hidden">
       <div>
@@ -55,7 +62,8 @@
     </main>
     <footer class="hidden">
       <p class="question-counter">
-        QUESTION <span id="questionNumber"></span><span>/ 10</span>
+        QUESTION <span id="questionNumber"></span
+        ><span id="totalQuestions">/ 10</span>
       </p>
     </footer>
     <script src="js/question.js"></script>

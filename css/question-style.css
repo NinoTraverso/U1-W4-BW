@@ -121,6 +121,38 @@ main p {
   background-color: #900080; 
 }
 
+#mixedQuestions {
+  display: flex;
+  justify-content: center;
+}
+
+.divNumberOfQuestions {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255, 0.1);
+  color: blanchedalmond;
+  border: 4px outset white;
+  border-radius: 70px;
+  cursor: pointer;
+  margin: 1% 2.5%;
+  padding: 2.5%;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+#numberOfQuestions {
+  border-radius: 70px;
+  text-align: center;
+  color: #D20094;
+  background-color: white;
+  font-weight: bold;
+  font-family: 'Outfit', sans-serif; 
+  width: 20%;
+  display:block;
+}
+
 input {
   display: none;
 }
