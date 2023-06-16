@@ -1,6 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5%;
 }
 
 #logo {
@@ -17,6 +18,10 @@ header {
   stroke: none;
 }
 
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
 .base-timer__path-elapsed {
   stroke-width: 10px;
   stroke: #d20094;
@@ -27,9 +32,20 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.8em;
-  top: 30px;
-  right: 30px;
+  font-size: 0.6em;
+  top: 32px;
+  right: 32px;
+}
+
+.base-timer__path-remaining {
+  width: 120px;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  stroke: currentColor;
+  color: #00ffff;
 }
 
 #remainingTime {
@@ -37,8 +53,15 @@ header {
   margin: 5%;
 }
 main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  margin-bottom: 5%;
+}
+
+main button {
+  margin-bottom: 3%;
+  margin-top: 5%;
 }
 
 #answer-container {
@@ -52,35 +75,34 @@ main {
 
 main p {
   margin-bottom: 5%;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 30px;
 }
 #answer-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .answerDiv {
-  width: 35%;
-  height: 2rem;
+  width: 30%;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255, 0.2);
+  background-color: rgb(255, 255, 255, 0.1);
   color: blanchedalmond;
-  border: 2px solid white;
+  border: 2px outset white;
   border-radius: 70px;
-
-  /* box-shadow: -2px -2px 8px white; */
   cursor: pointer;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1% 2.5%;
+  padding: 2.5%;
   font-weight: 600;
   font-size: 0.9em;
 }
 
 .answerDiv:hover {
-  border-color: rgb(255, 0, 200);
+  background-color: #900080; 
 }
 
 input {
@@ -88,7 +110,7 @@ input {
 }
 
 .checked {
-  background-color: #d20094;
+  background-color: #D20094;
 }
 
 .remove {
