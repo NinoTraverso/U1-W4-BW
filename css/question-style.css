@@ -83,13 +83,6 @@ main p {
   border-color: rgb(255, 0, 200);
 }
 
-/* .answerDiv {
-  width: 25%;
-  margin: 2%;
-  padding: 2.5%;
-  border: 2px outset #00ffff;
-  border-radius: 25px; */
-/* } */
 input {
   display: none;
 }
