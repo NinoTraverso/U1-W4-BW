@@ -296,7 +296,7 @@ const questionContainer = document.getElementById("quest-container")
 const addQuestion = (i, difficultyQuestion) => {    // Aggiungo la domanda
   questionContainer.innerText = difficultyQuestion[i].question
   const btn = document.getElementsByTagName("button") 
-  if ( questions.length === 1) btn[0].innerText = "GO TO RESULTS"
+  if ( difficultyQuestion.length === 1) btn[1].innerText = "GO TO RESULTS"
 }
 
 const answersCalculator = (i, difficultyQuestion) => {    // Faccio un array di sole risposte
