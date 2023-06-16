@@ -6,7 +6,7 @@ myForm.addEventListener("submit", function (e) {
 let emptyDiv = document.querySelector(".empty-div");
 
 let h2EmptyDiv = document.createElement("h2");
-h2EmptyDiv.innerText = "Grazie per il tuo feedback";
+h2EmptyDiv.innerText = "Grazie per il tuo feedback 😊";
 
 let h3EmptyDiv = document.createElement("h3");
 h3EmptyDiv.innerText = "Il benchmark è terminato";
