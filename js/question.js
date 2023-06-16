@@ -287,7 +287,7 @@ startButton.addEventListener("click", () => {
   addAnswer(difficultyQuestion)           
   addQuestionNumber(i)
   goToNextQuestion(difficultyQuestion) 
-  startTimer()
+  startTimer(difficultyQuestion)
 })
 
 
@@ -357,7 +357,7 @@ const addAnswerVerification = (difficultyQuestion) => {   // Verifico se la risp
     addAnswer(difficultyQuestion)
     addQuestionNumber(i)
     goToNextQuestion(difficultyQuestion) 
-    startTimer()
+    startTimer(difficultyQuestion)
   }}
   if(divCorrectAnswer.innerText === difficultyQuestion[i].correct_answer) {
     correctAnswer++
@@ -384,7 +384,7 @@ const goToNextQuestion = (difficultyQuestion) => {      // Aggiungo evento al cl
     answersCalculator(i, difficultyQuestion)
     addAnswer(difficultyQuestion)
     addQuestionNumber(i)
-    startTimer()
+    startTimer(difficultyQuestion)
     }
   })
 }
@@ -396,7 +396,7 @@ let correctAnswer = 0
 
 // Timer Function
 
-let timeLimit = 60
+let timeLimit = 30
 let timePassed = 0
 let timeLeft = timeLimit
 let fullDashArray = 283
@@ -405,8 +405,8 @@ remainingTime.innerText = timeLeft
 
 let timerInterval = 0
 
-const startTimer = () => {
-  timeLimit = 60
+const startTimer = (difficultyQuestion) => {
+  timeLimit = 30
   timePassed = 0
   timeLeft = timeLimit
   fullDashArray = 283
@@ -419,7 +419,10 @@ const startTimer = () => {
     timePassed += 1 
     timeLeft = timeLimit - timePassed
     remainingTime.innerText = timeLeft
-    setCircleDashArray();
+    setCircleDashArray(difficultyQuestion);
+    if( timeLeft <= 10) {
+      remainingTime.classList.add("alertTime")
+    }
   }, 1000)
 }
 
@@ -430,27 +433,28 @@ function calculateTimeFraction() {
 }
     
 // Update the dasharray value as time passes, starting with 283
-function setCircleDashArray() {
+function setCircleDashArray(difficultyQuestion) {
   const circleDashArray = [(calculateTimeFraction() * fullDashArray.toFixed(0)), 283]
   if ( circleDashArray[0] <= 0) {
     clearInterval(timerInterval)
-    addAnswerVerification()
-      i++ 
-    if ( i > questions.length - 1) {
+    addAnswerVerification(difficultyQuestion)
+    difficultyQuestion.splice( i, 1) 
+    i = Math.floor(Math.random() * difficultyQuestion.length)
+    if ( difficultyQuestion.length === 0) {
       localStorage.setItem("correctAnswer", correctAnswer)
       location.href ="results.html"
     }
-    if ( i < questions.length ) {
+    if ( difficultyQuestion.length > 0) {
       const allAnswerDiv = document.querySelectorAll(".answerDiv")
       allAnswerDiv.forEach(div => {
       div.classList.add("remove")
     })
-    addQuestion(i)
-    answersCalculator(i)
-    addAnswer()
+    addQuestion(i, difficultyQuestion)
+    answersCalculator(i, difficultyQuestion)
+    addAnswer(difficultyQuestion)
     addQuestionNumber(i)
-    goToNextQuestion() 
-    startTimer()
+    goToNextQuestion(difficultyQuestion) 
+    startTimer(difficultyQuestion)
   }}
   document
     .getElementById("base-timer-path-remaining")
